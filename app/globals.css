@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Variáveis de Cores para facilitar */
+:root {
+  --bg-principal: #f0f7f4;
+  --bg-card: #ffffff;
+  --verde-escuro: #1b3a24;
+  --verde-medio: #2d6a4f;
+  --verde-claro: #40916c;
+  --verde-destaque: #74c69d;
+  --texto: #2d3748;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-principal);
+  color: var(--texto);
+  margin: 0;
+  padding: 0;
+}
+
+/* Container Principal */
+.container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 40px;
+  background: var(--bg-card);
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(27, 58, 36, 0.06);
+}
+
+/* Menu de Navegação Premium */
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 40px;
+  background: #f7faf8;
+  padding: 8px;
+  border-radius: 16px;
+  border: 1px solid #e2ece9;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--verde-medio);
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 12px;
+  transition: all 0.25s ease;
+}
+
+.nav-link:hover {
+  background-color: var(--verde-escuro);
+  color: white;
+}
+
+/* Tipografia */
+h1 {
+  color: var(--verde-escuro);
+  font-size: 2.6rem;
+  margin-top: 0;
+  text-align: center;
+  font-weight: 800;
+}
+
+h2 {
+  color: var(--verde-medio);
+  font-size: 1.6rem;
+  margin-top: 40px;
+  border-bottom: 2px solid #e2ece9;
+  padding-bottom: 8px;
+}
+
+p {
+  line-height: 1.8;
+  font-size: 1.15rem;
+  color: #4a5568;
+}
+
+/* Grid de Cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid #e2ece9;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(45, 106, 79, 0.1);
+  border-color: var(--verde-destaque);
+}
+
+/* Área de Ilustração */
+.illustration-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+  padding: 20px;
+  background: #fdfefe;
+  border-radius: 16px;
+}
+
+.svg-art {
+  width: 150px;
+  height: 150px;
+  transition: transform 0.3s;
+}
+
+.card:hover .svg-art {
+  transform: scale(1.1);
+}
+
+/* Tabelas Estilizadas */
+.history-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 25px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e2ece9;
+}
+
+.history-table th {
+  background-color: var(--verde-escuro);
+  color: white;
+  padding: 16px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.history-table td {
+  padding: 16px;
+  background: white;
+  border-bottom: 1px solid #e2ece9;
+}
+
+.history-table tr:last-child td {
+  border-bottom: none;
+}
